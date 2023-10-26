@@ -1,0 +1,279 @@
+@charset "UTF-8";
+/* Default propeties assignement */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+:root {
+  --secondary: #262626;
+  --primary: #eeeeee;
+  --accent: #2F89DB;
+  --border: rgba(245, 245, 245, 0.6);
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--secondary);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  font-family: "Poppins";
+  /* font-family: 'Segoe UI'; */
+  text-decoration: none;
+  border: none;
+  /* border: 1px solid red; */
+  color: var(--secondary);
+}
+
+/* Button style */
+h1 {
+  font-size: 48px;
+}
+
+span {
+  color: var(--accent);
+}
+
+section {
+  padding: 50px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+section h1 {
+  padding: 0 0 50px 0;
+}
+
+#cookies {
+  width: 500px;
+  height: 416px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 22px;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  z-index: 3;
+}
+#cookies h1 {
+  margin-top: 16px;
+}
+#cookies p {
+  max-width: 247px;
+  text-align: center;
+}
+#cookies .buttons {
+  display: grid;
+  width: 100%;
+}
+#cookies .buttons #accept {
+  padding: 10px 15px;
+  margin: 0 20px;
+  border-radius: 8px;
+  color: var(--primary);
+  background: var(--accent);
+}
+#cookies .buttons #refuse {
+  padding: 10px 15px;
+  margin: 5px 20px;
+  border-radius: 8px;
+}
+
+/* Header */
+header {
+  margin: -22px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 748px;
+  /* background: whitesmoke; */
+  background: url(../imgs/PhoneBackground.jpg);
+  background-size: cover;
+  background-position: center;
+  border-bottom: 1px solid #ccc;
+}
+header #main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+header #main h1 {
+  font-weight: 800;
+  box-shadow: red;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: whitesmoke;
+  border-bottom: 1px solid #ccc;
+  z-index: 1;
+}
+nav .logo {
+  margin-left: 10px;
+}
+nav .navItems {
+  padding-right: 30px;
+}
+nav .navItems a {
+  color: var(--secondary);
+  margin-right: 15px;
+}
+nav .navItems .navInfos {
+  margin: 0;
+}
+
+/* Underline effect */
+hr {
+  height: 3px;
+  width: 64px;
+  margin-left: 0;
+  background: var(--accent);
+  transition: 0.3s ease-in-out;
+}
+
+/* Catégorie nos services */
+#nosServices {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 70px;
+}
+#nosServices #services {
+  display: flex;
+  text-align: center;
+}
+#nosServices #services .svg {
+  display: flex;
+  justify-content: center;
+}
+#nosServices #services .container {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 25px;
+  cursor: pointer;
+  transition: all;
+}
+#nosServices #services #phoneRepair {
+  margin-right: 50px;
+  display: flex;
+  justify-content: center;
+}
+#nosServices #services #phoneRepair, #nosServices #services #icloudReset {
+  max-width: 450px;
+  max-height: 350px;
+  width: 350px;
+  height: 350px;
+  background: whitesmoke;
+  box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  font-size: 20px;
+  transition: all 0.3s ease-in-out;
+}
+#nosServices #services #phoneRepair:hover, #nosServices #services #icloudReset:hover {
+  transform: scale(1.025);
+}
+
+/* Catégorie why us */
+#whyUs {
+  background: whitesmoke;
+}
+#whyUs .reasons {
+  display: flex;
+  height: 230px;
+  width: 230px;
+  background: whitesmoke;
+  border: 1px solid #ccc;
+  border-radius: 100%;
+}
+
+section#about{
+display:none;
+}
+
+#about {
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 70px;
+}
+#about h1 {
+  padding-bottom: 50px;
+}
+
+#map{
+    border: 0px;
+    margin: 8px;
+    border-radius: 8px;
+}
+footer {
+  height: 100px;
+  width: 100%;
+  background: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer a {
+  margin: 0 50px;
+}
+
+@keyframes moveUp {
+  from {
+    transform: translate(-50%, -30%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+}
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}/*# sourceMappingURL=style.css.map */
+#popupbottom{
+animation: moveUp 1s ease-in-out;
+    bottom: 0;
+    z-index: 1;
+    position: fixed;
+    display: none;
+    width: 70%;
+    height: 40%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+}
