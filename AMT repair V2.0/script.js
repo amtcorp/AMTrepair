@@ -1,4 +1,4 @@
-window.onload = function(){loader.style.display="none";document.body.style.overflow="visible";document.body.style.overflowX="hidden";}
+window.onload = function(){loader.style.display="none";document.body.style.overflow="visible";document.body.style.overflowX="hidden";mainsection.classList.add("animationloaded");}
 
 detectDeviceType();
 
