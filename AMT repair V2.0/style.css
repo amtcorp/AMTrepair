@@ -104,11 +104,12 @@ background-size: cover;
 
 background-position: center;
 
-animation: presentationanimation 0.3s ease-in-out;
-
 width : 100%;
 }
 
+.animationloaded {
+animation: presentationanimation 0.3s ease-in-out;
+}
 
 main {
     display: flex;
