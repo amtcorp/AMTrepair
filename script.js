@@ -1,3 +1,19 @@
+popup('<h1 style="font-size: 30px;font-weight: bold;font-family: arial;">Nouvelle version dipsonible</h1>', '<text style="font-size: 16px;font-weight: bold;font-family: arial;">Une nouvelle version sera bientot disponible et est en cours de dévelloppement <p></p>vous pouvez la tester si vous le souhaitez</text><p></p><button style="position:absolute;z-index:2;left: 0px;background: #2980b9;border-radius: 0 0 0 10px;width: 50%;font-family: arial;font-weight: bold;color: white;" onclick="opennewversion();">tester la nouvelle version</button><button style="width: 50%;background: white;position: absolute;z-index: 2;border-left: 1px solid;border-radius:0 0 10px 0;" onclick="closepopup()";>non merci</button>');
+
+function closepopup(){
+   let body = document.querySelector("body")
+    let popup = document.querySelector("#popup")
+    let bg = document.querySelector("#background")
+popup.style.display = "none"
+        body.style.overflow = "auto"
+        bg.style.display = "none"
+}
+
+function opennewversion(){
+document.location="./AMT repair V2.0/";
+}
+
+
 // Functions
 function wait(duration) {
     setTimeout(() => { }, duration)
