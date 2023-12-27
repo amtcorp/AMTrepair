@@ -72,7 +72,7 @@ DeviceOrientation();
     };
 
 document.getElementById('startbutton').addEventListener('click', function() {
-      const sectionPosition = document.getElementById('section2').offsetTop;
+      const sectionPosition = document.getElementById('section1').offsetTop;
       window.scrollTo({
         top: sectionPosition,
         behavior: 'smooth'
@@ -107,13 +107,14 @@ document.getElementById('startbutton').addEventListener('click', function() {
       });
     }
 
-  const section2 = document.getElementById('section2');
+  const section1 = document.getElementById('section1');
     const menu = document.querySelector('menu');
 
     // Ajouter la classe avec l'animation lorsque la souris entre dans la section
-    section2.addEventListener('mouseenter', () => {
+    section1.addEventListener('mouseenter', () => {
       
     });
+
 
 
 // Sélection des éléments du menu
@@ -201,7 +202,20 @@ items.forEach((item, index) => {
 
 
 function alert(statut) {
-msgbox.style.display="block";
+msgbox.classList.add('show');
 msgbox.innerHTML = statut ;
+alertIS();
  }
+function alertIS() {
+var msgBox = document.getElementById('msgbox');
+if (msgBox.classList.contains('show')) {
+document.body.style.overflow="hidden";
+} else {
+document.body.style.overflow="visible";
+}
+}
+function closealert() {
+msgbox.classList.remove('show');
+alertIS();
+}
 
