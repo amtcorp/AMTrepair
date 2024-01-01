@@ -1,5 +1,6 @@
 ::-webkit-scrollbar {
     width: 5px;
+    height:5px;
     
 }
 ::-webkit-scrollbar-thumb {
@@ -556,12 +557,12 @@ body.portrait #services .item .item-info #iteminfocat item {
     background: #ffffff85;
     padding: 0px;
     border-radius: 20px;
-    height: 40%;
+    height: 30%;
     flex-wrap: nowrap;
     margin: 0 0 10px 10px;
     align-content: center;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 }
 
 #services .item .item-info #iteminfocat item {
@@ -580,7 +581,7 @@ body.portrait #services .item .item-info #iteminfocat item {
     height: 100%;
 }
 
-img.logo {
+#infocat item img {
 width : 50%;
 }
 
