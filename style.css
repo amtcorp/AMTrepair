@@ -307,7 +307,7 @@ body.portrait #section1 menu {
     border: 1px solid #3498db;
     box-shadow: 0 0 10px rgb(52 152 219 / 57%);
     z-index: 1;
-    position: relative;
+    position: fixed;
     bottom: 5px;
     left: 50%;
     transform: translate(-50%, 0%);
