@@ -312,6 +312,7 @@ body.portrait #section1 menu {
     left: 50%;
     transform: translate(-50%, 0%);
     padding-left: 0px;
+    height: 5%;
 }
 
 
@@ -510,7 +511,11 @@ body.portrait #services .item.selected .item-info {
     text-align: center;
 }
 
-
+#services .item3 .item-info {
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
 
 body.portrait #services .item .item-info #center {
     padding-left: 0px;
