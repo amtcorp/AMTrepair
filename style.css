@@ -263,7 +263,7 @@ body.paysage #section1 menu {
   0% {
     content-visibility: hidden;
     width: 40%; /* Largeur de départ */
-    height: 20px; /* Hauteur de départ */
+    height: 10px; /* Hauteur de départ */
   }
 
   50%{
@@ -271,7 +271,7 @@ body.paysage #section1 menu {
   }
   100% {
     width: 95%; /* Largeur finale, dans cet exemple, 20px plus large */
-    height: auto; /* Hauteur finale, dans cet exemple, 10px plus haute */
+    height: 5%; /* Hauteur finale, dans cet exemple, 10px plus haute */
     opacity:1;
   }
 }
