@@ -1,5 +1,6 @@
 ::-webkit-scrollbar {
     width: 5px;
+    height : 5px;
     
 }
 ::-webkit-scrollbar-thumb {
@@ -452,6 +453,7 @@ body.portrait #services .item.selected {
     z-index: 1;
     margin: 0 10px 0 10px;
     /* padding: 0 0 10px 0; */
+    transform: translate(0px, -40px);
 }
 
 #services .item.selected {
@@ -538,11 +540,16 @@ body.portrait #services .item .item-info #center {
 
 body.portrait #services .item .item-info #iteminfocat {
     display: flex;
-    flex-direction: row;
-    width: 100%;
-    flex-wrap: wrap;
+    max-width: 100%;
     height: 40%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
     align-content: center;
+    padding-top: 5px;
 }
 
 #services .item .item-info #iteminfocat {
@@ -554,18 +561,19 @@ body.portrait #services .item .item-info #iteminfocat {
 }
 
 body.portrait #services .item .item-info #iteminfocat item {
-    display: inline-flex;
+    display: flex;
     box-shadow: 0 0 10px rgb(0 0 0 / 10%);
-    flex-direction: column;
-    width: 40%;
+    width: 100%;
     background: #ffffff85;
     padding: 0px;
     border-radius: 20px;
-    height: 30%;
-    flex-wrap: nowrap;
+    height: 90%;
     margin: 0 0 10px 10px;
     align-content: center;
+    flex-direction: column;
+    min-width: 93%;
     justify-content: center;
+    flex-wrap: nowrap;
     align-items: center;
 }
 
@@ -587,6 +595,12 @@ body.portrait #services .item .item-info #iteminfocat item {
 
 #infocat item img {
 width : 50%;
+}
+
+
+body.portrait #services .item .item-info #iteminfocat item img.logo {
+    width: 30% !important;
+    height: auto !important;
 }
 
 #services .item.selected contenu {
