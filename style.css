@@ -23,7 +23,6 @@ separation {
     width: -webkit-fill-available;
 }
 
-
 #loader {
     position: fixed;
     z-index: 100;
@@ -617,12 +616,56 @@ display:none;
 
 #contact-item {
     display: flex;
+    flex-direction: column;
+    background: white;
+    border-radius: 20px;
+    padding: 10px 20px 10px 20px;
+}
+
+#contact-item top {
+display: flex;
     align-items: center;
     flex-direction: row;
     justify-content: space-between;
     background: white;
-    border-radius: 20px;
-    padding: 10px 20px 10px 20px;
+}
+
+#contact-item bottom {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    background: white;
+    transition: all 0.5s ease;
+    padding-top: 0px;
+    height: 0px;
+    opacity: 0;
+    content-visibility: hidden;
+}
+
+#contact-item bottom.active {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    background: white;
+    transition: all 0.5s ease;
+    padding-top: 20px;
+    height: 80px;
+    opacity: 1;
+    content-visibility: visible;
+}
+
+#contact-item button {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+#contact-item button img {
+height : 20px;
 }
 
 #contact-item #left-contactitem {
@@ -642,6 +685,12 @@ display:none;
 
 #contact-item #button-contactitem img {
     height: 30px;
+transition: transform 0.5s ease;
+}
+
+
+#contact-item #button-contactitem img.rotated {
+  transform: rotate(90deg);
 }
 
 #section1 #rightcontainer #map {

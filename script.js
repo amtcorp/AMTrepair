@@ -272,3 +272,14 @@ serviceItems.forEach(item => {
 backButton.addEventListener('click', handleBackButtonClick);
 
 
+
+
+document.querySelector('#contact-item top').addEventListener('click', function() {
+document.querySelector('#button-contactitem img').classList.toggle('rotated');
+document.querySelector('#contact-item bottom').classList.toggle('active');
+    });
+
+
+document.querySelector('#contact-item bottom button').addEventListener('click', function() {
+alert('scannez le code qr <alinea></alinea><img src="./assets/images/QRphone.png" style="height: 50%;"></img> ou appelez au 07.50.04.89.92 <p></p><button onclick="closealert();">fermer</button>');
+    });
