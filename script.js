@@ -281,5 +281,11 @@ document.querySelector('#contact-item bottom').classList.toggle('active');
 
 
 document.querySelector('#contact-item bottom button').addEventListener('click', function() {
+const deviceType = detectDeviceType();
+if ( deviceType === 'desktop' ) {
 alert('scannez le code qr <alinea></alinea><img src="./assets/images/QRphone.png" style="height: 50%;"></img> ou appelez au 07.50.04.89.92 <p></p><button onclick="closealert();">fermer</button>');
+} else {
+document.location.href = "tel:" + "33750048992";
+}
     });
+
