@@ -565,6 +565,7 @@ body.portrait #services .item.selected {
     width: 30%;
     height: 45%;
     background: #ffffff87;
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     display: flex;
     align-items: center;
