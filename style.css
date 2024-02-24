@@ -58,6 +58,7 @@ body.portrait #AMTlinkbutton {
     height: 10%;
     box-shadow: 0 0 10px rgb(0 0 0 / 10%);
     width: 50px;
+    -webkit-backdrop-filter: blur(4px);
     backdrop-filter: blur(4px);
     background-color: #ffffff4C;
     border-radius: 10px 0px 0px 10px;
