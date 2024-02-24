@@ -51,6 +51,49 @@ margin : 0px;
 overflow : hidden;
 }
 
+body.portrait #AMTlinkbutton {
+    top: 90%;
+    right: 0%;
+    position: absolute;
+    height: 10%;
+    box-shadow: 0 0 10px rgb(0 0 0 / 10%);
+    width: 50px;
+    backdrop-filter: blur(4px);
+    background-color: #ffffff4C;
+    border-radius: 10px 0px 0px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    transform: translate(0px, -20px);
+}
+
+
+#AMTlinkbutton {
+    top: 30%;
+    right: 0%;
+    position: absolute;
+    height: 10%;
+    box-shadow: 0 0 10px rgb(0 0 0 / 10%);
+    width: 50px;
+    backdrop-filter: blur(4px);
+    background-color: #ffffff4C;
+    border-radius: 10px 0px 0px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    z-index: 1;
+}
+
+#AMTlinkbutton img {
+width : 70%;
+}
+
 navigation{
     top: 0%;
     position: fixed;
@@ -81,6 +124,7 @@ header {
     width: 100%;
     flex-wrap: wrap;
     justify-content: space-around;
+    /*background-image: linear-gradient(123deg, red, #d7d8cc,#ccbdaa,#656462de,#8d9dac,#c5eec6);*/
 }
 
 presentation{
@@ -103,7 +147,7 @@ text-align: center;
 
 background: no-repeat;
 
-background: url(./assets/images/PhoneBackground-transparent2.png);
+background: url(./assets/images/PhoneBackground-transparent3.png);
 
 background-size: cover;
 
@@ -132,6 +176,47 @@ main {
     background: #ffffff85;
     padding: 0 10px 0 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+main button {
+    border-radius: 10px;
+    padding: 8px 21px;
+    font-size: 16px;
+    font-weight: bold;
+    border: 2px solid #3b3c3d;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s linear;
+    color: #3b3c3d;
+    backdrop-filter: blur(0.5rem);
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+main button img {
+    width: 20px;
+    position: absolute;
+    right: 20px;
+    transition: all 0.5s ease;
+}
+
+main button:hover img {
+    width: 20px;
+    position: absolute;
+    right: 20px;
+    transform: translate(10px, 0px);
+    filter: invert(100%);
+    transition: all 0.5s ease;
+}
+
+body.portrait main button {
+    width: 90%;
+    position: absolute;
+    bottom: 25%;
+    transform: translate(3%, 0px);
 }
 
 @keyframes deplacement-texte {
@@ -279,13 +364,23 @@ body.paysage #section1 menu {
 @keyframes CloseExtandMenu {
   0% {
     width: 95%; /* Largeur finale, dans cet exemple, 20px plus large */
-    height: auto; /* Hauteur finale, dans cet exemple, 10px plus haute */
-   content-visibility: hidden;
-   opacity:1;
+    height: 5%; /* Hauteur finale, dans cet exemple, 10px plus haute */
+    opacity:1;
+    content-visibility: hidden;
+  }
+
+  50%{
+    content-visibility: hidden;
+    width: 40%; /* Largeur de départ */
+    height: 10px; /* Hauteur de départ */
   }
 
   100% {
-   opacity:0;
+   opacity:0 !important;
+   display: none !important;
+   width: 0px !important;
+   height: 0px !important;
+   content-visibility: hidden;
   }
 }
 
@@ -296,7 +391,7 @@ body.portrait #section1 menu {
     font-size: 16px;
     font-weight: bold;
     font-family: arial;
-    width: 95%;
+    width: 0%;
     margin: 0;
     background: white;
     /* padding: 0 10px 0 0; */
@@ -313,6 +408,7 @@ body.portrait #section1 menu {
     transform: translate(-50%, 0%);
     padding-left: 0px;
     height: 20%;
+    height: 0%;
 }
 
 
@@ -467,7 +563,8 @@ body.portrait #services .item.selected {
 #services .item {
     width: 30%;
     height: 45%;
-    background: white;
+    background: #ffffff87;
+    backdrop-filter: blur(10px);
     display: flex;
     align-items: center;
     margin: 0 0 10px 10px;
@@ -477,6 +574,7 @@ body.portrait #services .item.selected {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
+    cursor: url("./assets/images/Pointcursor.png"), default;
 }
 
 #services .item img {
@@ -496,12 +594,39 @@ body.portrait #services .item.selected .item-info {
     justify-content: space-between;
 }
 
+#services .item.selected .item-info img.swipe {
+display : none;
+}
+
+body.portrait #services .item.selected .item-info img.swipe {
+    display: flex;
+    position: absolute;
+    height: 15%;
+    width: auto;
+    right: 20px;
+    top: 50%;
+    transform: translate(0px, -130%);
+    opacity: 90%;
+}
+
 #services .item.selected .item-info {
     display: flex;
     flex-direction: column;
     width: 100%;
     height: 100%;
     text-align: justify;
+    cursor: default;
+    justify-content: space-around;
+}
+
+#services .item2.selected .item-info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    text-align: justify;
+    cursor: default;
+    justify-content: space-around;
 }
 
 #services .item .item-info {
@@ -554,9 +679,11 @@ body.portrait #services .item .item-info #iteminfocat {
 #services .item .item-info #iteminfocat {
     display: flex;
     flex-direction: row;
-    width: 100%;
-    flex-wrap: nowrap;
-    align-items: center;
+    height: 40%;
+}
+
+body.paysage #services .item .item-info #iteminfocat.center {
+    justify-content: center;
 }
 
 body.portrait #services .item .item-info #iteminfocat item {
@@ -577,19 +704,21 @@ body.portrait #services .item .item-info #iteminfocat item {
 }
 
 #services .item .item-info #iteminfocat item {
+
     display: inline-flex;
     flex-wrap: nowrap;
     box-shadow: 0 0 10px rgb(0 0 0 / 10%);
     flex-direction: column;
     align-content: center;
     margin: 21px 21px;
-    width: 100%;
+    width: 20%;
     background: #ffffff85;
     /* padding: 20px 20px; */
     justify-content: center;
     align-items: center;
     border-radius: 20px;
-    height: 100%;
+    /* height: 30%; */
+
 }
 
 #infocat item img {
@@ -721,6 +850,18 @@ transition: transform 0.5s ease;
   }
 }
 
+@keyframes ButtonHide {
+  from {
+    
+    opacity : 1;
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(200%);
+    opacity : 0;
+  }
+}
+
 
 
 #scrollToTopBtn {
@@ -744,6 +885,14 @@ transition: transform 0.5s ease;
     cursor: pointer;
 }
 
+#scrollToTopBtn.hide {
+    animation: ButtonHide 0.5s forwards;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    cursor: pointer;
+}
+
 body.portrait #scrollToTopBtn.active {
     bottom: 65px;
 }
@@ -759,17 +908,27 @@ body.portrait #scrollToTopBtn.active {
   }
 }
 
+@keyframes HideAlert {
+  from {
+    opacity : 1;
+    display:flex;
+  }
+  to {
+    opacity : 0;
+    display:none;
+  }
+}
+
 
 #msgbox {
-    display:none;
-    opacity:0;
-    bottom: 5px;
+    display: none;
+    opacity: 0;
+    bottom: 20px;
     width: 98%;
-    height: 25%;
-    z-index: 2;
+    z-index: 99;
     position: fixed;
-    background: white;
-    border-radius: 10px;
+    background: #ffffff87;
+    height: 30%;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -778,9 +937,40 @@ body.portrait #scrollToTopBtn.active {
     font-size: 16px;
     font-weight: bold;
     font-family: arial;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
 }
 
 #msgbox.show {
   display:flex;
-  animation: ShowAlert 1.5s forwards;
+  animation: ShowAlert 1s forwards;
+}
+
+#msgbox.hide {
+  display:flex;
+  animation: HideAlert 1s forwards;
+}
+
+msgbox button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    background: #f8f8ff80;
+    backdrop-filter: blur(10px);
+    align-items: center;
+    justify-content: center;
+}
+
+msgbox button img{
+    width: 100%;
+}
+
+msgbox button:hover {
+    background: #f8f8ff80;
+    border-color: #a9a6a687;
 }
