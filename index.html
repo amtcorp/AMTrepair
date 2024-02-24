@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+<div id="AMTlinkbutton">
+<img src="./assets/images/link.png">
+</div>
 <div id="loader">
 <div><img src="./assets/logos/logo-black.png"></div>
 <p></p>Chargement en cours
@@ -18,7 +21,12 @@ Envie de faire réparer votre téléphone à moindre coût ?
 <alinea></alinea>
 Avec nous c'est possible !
 <p></p>
-<button id="startbutton">découvrir</button>
+<button id="startbutton">Découvrir<img src="./assets/images/discover.png" style="
+    width: 20px;
+    position: absolute;
+    right: 20px;
+    transition: all 0.5s ease;
+"></button>
 </main>
 </presentation>
 </header>
@@ -41,10 +49,8 @@ Avec nous c'est possible !
 </contenu>
 <div class="item-info">
 <h1>Réparation de votre téléphone</h1>
-    <p></p>
-
-
-<p><span>Nous réparons tous types de téléphones :</span></p>       
+    
+<span style="padding-left: 8px;">Nous réparons tous types de téléphones :</span>       
 <div id="iteminfocat">
 
     <item>
@@ -68,8 +74,8 @@ Avec nous c'est possible !
 </item>
 
 </div>
-<p><span>Nous pouvons effectuer différents types de réparations :</span></p>   
-<div  id="iteminfocat"">
+<span style="padding-left: 8px;">Nous pouvons effectuer différents types de réparations :</span>   
+<div id="iteminfocat" class="center">
 
     <item>
     <img src="./assets/images/iPhoneBrokenScreen.png" class="logo">
@@ -97,11 +103,12 @@ Avec nous c'est possible !
       <p>Réinitialisation de mot de passe</p>
 </contenu>
 <div class="item-info">
-<h1>si vous avez oublié votre mot de passe</h1>
+<h1>Si vous avez oublié votre mot de passe</h1>
 <span style="
     padding-left: 8px;
-">systèmes pris en charge :</span>
-<item style="
+">Systèmes pris en charge :</span>
+
+    <item style="
     display: inline-flex;
     flex-wrap: nowrap;
     box-shadow: 0 0 10px rgb(0 0 0 / 10%);
@@ -115,9 +122,25 @@ Avec nous c'est possible !
     align-items: center;
     border-radius: 20px;
     height: 30%;
-"><img src="./assets/images/windows11-logo.png" style="
+    /* background-position: center; */
+    /* background-size: cover; */
+    /* background-repeat: no-repeat; */
+">
+<img src="./assets/images/windows11-logo.png" style="
     width: 30%;
 "></item>
+<span style="padding-left: 8px;">Prise en charge détaillée :</span>
+
+<div id="iteminfocat" style="">
+    <item style="background-image: linear-gradient(223deg, #2067b2,#1a73e8,#1a73e8,#1a73e8,#3286de);">
+<img src="./assets/images/bitlocker.png" style="width: 30%;">
+</item>
+    
+
+<item style="">
+    <img src="./assets/images/padlock-unlock-password.png">
+</item>
+    </div>
 </div>
 </div>
 <div class="item item3">
@@ -130,6 +153,21 @@ Avec nous c'est possible !
 <img src="./assets/images/laptop%20(2).png" style="
     width: 30%;
 ">
+<span>Votre pc est obsolète ne s'allume plus ou est ralenti ? venez faire réparer votre pc !</span>
+<div id="iteminfocat" class="center">
+<item style=""><img src="./assets/images/laptopblackscreen.png" style="
+    width: 50%;
+"></item>
+
+<item style=""><img src="./assets/images/laptoploading.png" style="
+    width: 50%;
+"></item>
+
+<item style=""><img src="./assets/images/laptopobsolete.png" style="
+    width: 50%;
+"></item>
+    </div>
+
 </div>
 </div>
 <div class="item item4">
@@ -138,6 +176,22 @@ Avec nous c'est possible !
 <p>Garantie</p>
 </contenu>
 <div class="item-info">
+<h1>Infos sur la garantie</h1>
+
+<h1>Parce que réparation moins chère ne veut pas dire qu'elle n'est pas de qualité</h1>
+<div id="iteminfocat" class="center">
+<item style=""><img src="./assets/images/cash.png" style="
+    width: 50%;
+"></item>
+<item style=""><img src="./assets/images/quality.png" style="
+    width: 50%;
+"></item>
+</div>
+<h1><span style="color:#3498db">Toutes nos réparations sont garanties 2 mois**</span></H1>
+<ul>
+<li><span>**hors casse</span></li>
+<li><span>**hors oxydation</span></li>
+</ul>
 </div>
 </div>
 
@@ -146,7 +200,8 @@ Avec nous c'est possible !
 <img src="./assets/images/repair-time.png">
 <p>Suivre ma réparation</p>
 </contenu>
-<div class="item-info">
+<div class="item-info" style="align-items: center;">
+<h1>Ce service n'est pas encore disponible</h1>
 </div>
 </div>
 
