@@ -86,6 +86,7 @@ document.getElementById('startbutton').addEventListener('click', function() {
       var section1Offset = section1.offsetTop;
 
       if (window.pageYOffset > section1Offset) {
+        scrollToTopButton.classList.remove('hide');
         scrollToTopButton.classList.add('active');
 	menu.classList.remove('hide');
 	menu.classList.add('slide-animation');
@@ -95,6 +96,7 @@ document.getElementById('startbutton').addEventListener('click', function() {
         scrollToTopButton.classList.remove('active');
 	menu.classList.remove('slide-animation');
 	menu.classList.add('hide');
+        scrollToTopButton.classList.add('hide');
 
 
       }
@@ -202,6 +204,7 @@ items.forEach((item, index) => {
 
 
 function alert(statut) {
+msgbox.classList.remove('hide');
 msgbox.classList.add('show');
 msgbox.innerHTML = statut ;
 alertIS();
@@ -216,6 +219,7 @@ document.body.style.overflow="visible";
 }
 function closealert() {
 msgbox.classList.remove('show');
+msgbox.classList.add('hide');
 alertIS();
 }
 
@@ -283,9 +287,10 @@ document.querySelector('#contact-item bottom').classList.toggle('active');
 document.querySelector('#contact-item bottom button').addEventListener('click', function() {
 const deviceType = detectDeviceType();
 if ( deviceType === 'desktop' ) {
-alert('scannez le code qr <alinea></alinea><img src="./assets/images/QRphone.png" style="height: 50%;"></img> ou appelez au 07.50.04.89.92 <p></p><button onclick="closealert();">fermer</button>');
+alert('scannez le code qr <alinea></alinea><img src="./assets/images/QRphone.png" style="height: 50%;"></img> ou appelez au 07.50.04.89.92 <p></p><button onclick="closealert();"><img src="./assets/images/close-blue.png"></button>');
 } else {
 document.location.href = "tel:" + "33750048992";
 }
     });
 
+//<a href="sms:0602010304">Message SMS</a>
