@@ -357,7 +357,7 @@ body.paysage #section1 menu {
   }
   100% {
     width: 95%; /* Largeur finale, dans cet exemple, 20px plus large */
-    height: 5%; /* Hauteur finale, dans cet exemple, 10px plus haute */
+    height: 6%; /* Hauteur finale, dans cet exemple, 10px plus haute */
     opacity:1;
   }
 }
@@ -365,7 +365,7 @@ body.paysage #section1 menu {
 @keyframes CloseExtandMenu {
   0% {
     width: 95%; /* Largeur finale, dans cet exemple, 20px plus large */
-    height: 5%; /* Hauteur finale, dans cet exemple, 10px plus haute */
+    height: 6%; /* Hauteur finale, dans cet exemple, 10px plus haute */
     opacity:1;
     content-visibility: hidden;
   }
