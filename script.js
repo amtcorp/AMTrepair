@@ -294,3 +294,7 @@ document.location.href = "tel:" + "33750048992";
     });
 
 //<a href="sms:0602010304">Message SMS</a>
+
+function debugmode() {
+alert('cc');
+}
