@@ -9,7 +9,7 @@ window.onload = () => {
     logo.id = "icon";
     logo.src = "./assets/logos/Amt repair signature medium.svg";
     loader.appendChild(logo);
-    errormsg.innerText = `maintenance en cours <p></p> en cas de besoin contactez le 07.50.04.89.92`;
+    errormsg.innerHTML = 'maintenance en cours <p></p> en cas de besoin contactez le 07.50.04.89.92';
     loader.appendChild(errormsg);
    // setTimeout( () => { document.location = ""; },30000)
   }, 3000);
