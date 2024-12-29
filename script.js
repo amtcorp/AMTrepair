@@ -1,7 +1,7 @@
 let maintenance = true;
 window.onload = () => {
   if (maintenance) {
-    loader.innerText = "OOps on dirait que quelque chose ne s'est pas passé pas correctement !";
+    loader.innerText = "Oups on dirait que quelque chose ne s'est pas passé pas correctement !";
     setTimeout ( () => {
     loader.innerText = "";
     logo = document.createElement('img');
