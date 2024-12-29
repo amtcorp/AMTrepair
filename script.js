@@ -1,5 +1,28 @@
-window.onload = function(){document.body.style.overflow="visible";document.body.style.overflowX="hidden";mainsection.classList.add("animationloaded");loader.style.display="none";};
-
+let maintenance = true;
+window.onload = () => {
+  if (maintenance) {
+    loader.innerText = "OOps on dirait que quelque chose ne s'est pas passé pas correctement !";
+    setTimeout ( () => {
+    loader.innerText = "";
+    logo = document.createElement('img');
+    errormsg = document.createElement('span');
+    logo.id = "icon";
+    logo.src = "./assets/logos/Amt repair signature medium.svg";
+    loader.appendChild(logo);
+    errormsg.innerText = "maintenance en cours";
+    loader.appendChild(errormsg);
+   // setTimeout( () => { document.location = ""; },30000)
+  }, 3000);
+  } else {
+  loader.setAttribute("minimize","");
+  setTimeout( () => {loader.style.display = "none";},1500)
+  document.body.style.overflow = "visible";
+  document.body.style.overflowX = "hidden";
+  mainsection.classList.add("animationloaded");
+  getSavedThemePreference();
+  animationManager();
+  }
+}
 detectDeviceType();
 
 // Fonction pour détecter les différents types d'appareils
